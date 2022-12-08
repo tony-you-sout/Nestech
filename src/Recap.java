@@ -12,6 +12,7 @@ public class Recap {
         *   char rank='A';
         * */
         String name="Nestech";
+        char rank='a';
         int age=18;
         //System.out.println dùng để in chuỗi "hello world"
         System.out.println("Hello world");
