@@ -20,3 +20,7 @@ Kiểm tra xem chuỗi này ký tự “a” xuất hiện bao nhiêu lần
 In ra số lần đó.
 bài 8
 Chương trình nhập vào một chuỗi và in ra chuỗi nghịch đảo của chuỗi nhập.
+baì 9
+viết chương trình cho phép chèn giá trị y vào vị trí x của mảng
+bài 10
+viết chương trình cho người dùng chọn các bài từ 1-9 (dùng switch case) nhập số khác 1-9 thì in ra lỗi và yêu cầu nhập lại
