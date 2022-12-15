@@ -71,9 +71,48 @@ public class SuaBT {
 //        int count= bai7(text);
 //        System.out.printf("a xuất hiện:%d lần\n",count);
 //        Chương trình nhập vào một chuỗi và in ra chuỗi nghịch đảo của chuỗi nhập.
-        System.out.println("nhập vào chuỗi ");
-        String text= scan.nextLine();
-            bai8(text);
+//        System.out.println("nhập vào chuỗi ");
+//        String text= scan.nextLine();
+//            bai8(text);
+//        viết chương trình cho phép chèn giá trị y vào vị trí x của mảng
+        System.out.println("nhập n");
+      int n=Integer.parseInt(scan.nextLine());
+        int [] arr=new int[n];//array
+        for(int i=0;i<arr.length;i++){
+            System.out.printf("nhập vào phần tử thứ %d\n",i);
+            arr[i]=Integer.parseInt(scan.nextLine());
+        }
+        System.out.println("nhập giá trị y");
+        int y=Integer.parseInt(scan.nextLine());
+        System.out.println("nhập vị trí x");
+        int x=Integer.parseInt(scan.nextLine());
+        int []newArr= bai9(y,x,arr);
+        for(int item:newArr){
+            System.out.println(item);
+        }
+
+    }
+
+    private static int [] bai9(int value, int position,int [] numbers) {
+        int []tempArr=new int[numbers.length+1];
+        int numberIndex= numbers.length;
+        if(position==0){
+            tempArr[0]=value;
+            for(int i=1;i<numberIndex+1;i++){
+                tempArr[i]=numbers[i-1];
+            }
+        }
+        else {
+            for(int j=0;j<position;j++){
+                tempArr[j]=numbers[j];
+            }
+            for(int k=position+1;k<tempArr.length;k++){
+                tempArr[k]=numbers[k-1];
+            }
+            tempArr[position]=value;
+        }
+
+    return tempArr;
     }
 
     private static void bai8(String text) {

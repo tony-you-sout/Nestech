@@ -24,3 +24,8 @@ baì 9
 viết chương trình cho phép chèn giá trị y vào vị trí x của mảng
 bài 10
 viết chương trình cho người dùng chọn các bài từ 1-9 (dùng switch case) nhập số khác 1-9 thì in ra lỗi và yêu cầu nhập lại
+
+
+[1,2,3,4,5]
+[1,2,3,0,4,5]
+i=i+1
