@@ -1,0 +1,6 @@
+1. khởi tạo local repo=> git init
+2. thêm đường dẫn dến remote repo trên github=> git remote add origin 'đường dẫn'
+3. thực hiện thêm file muốn lưu vào local repo =>git add 'tên file' or git add . để thêm tất cả các file(dùng lệnh này cho lẹ)
+4. thực hiện commit nhằm xác nhận việc lưu các thay đổi và để lại lời nhắn về thay đổi đã thực hiện=> git commit -m "lời nhắn"
+vd git commit -m "fix bug"
+5. thực hiện đẩy code lên github => git push -u origin master (dùng với lần push đầu tiên), git push (với các lần còn lại)
