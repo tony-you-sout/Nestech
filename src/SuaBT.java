@@ -66,10 +66,20 @@ public class SuaBT {
 //        Viết chương trình cho phép nhập vào một chuỗi
 //        Kiểm tra xem chuỗi này ký tự “a” xuất hiện bao nhiêu lần
 //        In ra số lần đó.
-        System.out.println("nhập chuỗi");
+//        System.out.println("nhập chuỗi");
+//        String text= scan.nextLine();
+//        int count= bai7(text);
+//        System.out.printf("a xuất hiện:%d lần\n",count);
+//        Chương trình nhập vào một chuỗi và in ra chuỗi nghịch đảo của chuỗi nhập.
+        System.out.println("nhập vào chuỗi ");
         String text= scan.nextLine();
-        int count= bai7(text);
-        System.out.printf("a xuất hiện:%d lần\n",count);
+            bai8(text);
+    }
+
+    private static void bai8(String text) {
+        for(int i=text.length()-1;i>-1;i--){
+            System.out.print(text.charAt(i));
+        }
     }
 
     private static int bai7(String text) {
