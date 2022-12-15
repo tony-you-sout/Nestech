@@ -55,14 +55,31 @@ public class SuaBT {
 //        System.out.printf("min=%d",result);
 //        Viết chương trình cho phép nhập vào n, sau đó nhập vào n phần tử số nguyên.
 //         Sắp xếp các phần tử trong mảng theo thứ tự ngược lại.
-        System.out.println("nhập n");
-      int n=Integer.parseInt(scan.nextLine());
-        int [] arr=new int[n];//array
-        for(int i=0;i<arr.length;i++){
-            System.out.printf("nhập vào phần tử thứ %d\n",i);
-            arr[i]=Integer.parseInt(scan.nextLine());
+//        System.out.println("nhập n");
+//      int n=Integer.parseInt(scan.nextLine());
+//        int [] arr=new int[n];//array
+//        for(int i=0;i<arr.length;i++){
+//            System.out.printf("nhập vào phần tử thứ %d\n",i);
+//            arr[i]=Integer.parseInt(scan.nextLine());
+//        }
+//        bai6(arr);
+//        Viết chương trình cho phép nhập vào một chuỗi
+//        Kiểm tra xem chuỗi này ký tự “a” xuất hiện bao nhiêu lần
+//        In ra số lần đó.
+        System.out.println("nhập chuỗi");
+        String text= scan.nextLine();
+        int count= bai7(text);
+        System.out.printf("a xuất hiện:%d lần\n",count);
+    }
+
+    private static int bai7(String text) {
+        int count=0;
+        for(int i=0;i<text.length();i++){
+            if(text.charAt(i)=='a'){
+                count++;
+            }
         }
-        bai6(arr);
+        return count;
     }
 
     private static void bai6(int [] numbers) {
