@@ -44,16 +44,31 @@ public class SuaBT {
 //        Cuối cùng, chương trình sẽ xuất ra phần tử có giá trị nhỏ nhất.
 //        System.out.println("nhập n");
 //        int n=Integer.parseInt(scan.nextLine());
-        System.out.println("nhập vào số phần tử mảng");
-       int numberOfElement=Integer.parseInt(scan.nextLine());
-        int [] arr=new int[numberOfElement];
+//        System.out.println("nhập vào số phần tử mảng");
+//       int numberOfElement=Integer.parseInt(scan.nextLine());
+//        int [] arr=new int[numberOfElement];
+//        for(int i=0;i<arr.length;i++){
+//            System.out.printf("nhập vào phần tử thứ %d\n",i);
+//            arr[i]=Integer.parseInt(scan.nextLine());
+//        }
+//        int result=bai5(arr);
+//        System.out.printf("min=%d",result);
+//        Viết chương trình cho phép nhập vào n, sau đó nhập vào n phần tử số nguyên.
+//         Sắp xếp các phần tử trong mảng theo thứ tự ngược lại.
+        System.out.println("nhập n");
+      int n=Integer.parseInt(scan.nextLine());
+        int [] arr=new int[n];//array
         for(int i=0;i<arr.length;i++){
             System.out.printf("nhập vào phần tử thứ %d\n",i);
             arr[i]=Integer.parseInt(scan.nextLine());
         }
-        int result=bai5(arr);
-        System.out.printf("min=%d",result);
+        bai6(arr);
+    }
 
+    private static void bai6(int [] numbers) {
+            for(int i=numbers.length-1;i>=0;i--){
+                System.out.printf("numbers[%d]=%d\n",i,numbers[i]);
+            }
     }
 
     public static void bai1(int n){
