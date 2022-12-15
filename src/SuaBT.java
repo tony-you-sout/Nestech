@@ -31,15 +31,28 @@ public class SuaBT {
 //        }
 //        Viết chương trình cho phép nhập vào một số nguyên n ( n < 1000 )
 //        In ra tất cả số nguyên trong khoảng từ 0 - n.
-        System.out.println("nhập số n <1000");
-        int n=Integer.parseInt(scan.nextLine());
-        while (n>=1000){
-            System.out.println("nhập số n <1000");
-            n=Integer.parseInt(scan.nextLine());
+//        System.out.println("nhập số n <1000");
+//        int n=Integer.parseInt(scan.nextLine());
+//        while (n>=1000){
+//            System.out.println("nhập số n <1000");
+//            n=Integer.parseInt(scan.nextLine());
+//
+//        }
+//        bai4(n);
 
+//        Viết chương trình cho phép nhập vào n, sau đó nhập vào n phần tử số nguyên (có thể dương hoặc âm).
+//        Cuối cùng, chương trình sẽ xuất ra phần tử có giá trị nhỏ nhất.
+//        System.out.println("nhập n");
+//        int n=Integer.parseInt(scan.nextLine());
+        System.out.println("nhập vào số phần tử mảng");
+       int numberOfElement=Integer.parseInt(scan.nextLine());
+        int [] arr=new int[numberOfElement];
+        for(int i=0;i<arr.length;i++){
+            System.out.printf("nhập vào phần tử thứ %d\n",i);
+            arr[i]=Integer.parseInt(scan.nextLine());
         }
-        bai4(n);
-
+        int result=bai5(arr);
+        System.out.printf("min=%d",result);
 
     }
 
@@ -73,6 +86,15 @@ public class SuaBT {
         for(int i=0;i<=number;i++){
             System.out.println(i);
         }
+
+    }
+    public static int bai5(int [] numbers){
+        int min=numbers[0];
+        for(int ele:numbers){
+                if(min>ele)
+                    min=ele;
+        }
+        return min;
 
     }
 }
