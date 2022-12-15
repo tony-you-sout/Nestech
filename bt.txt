@@ -1,0 +1,22 @@
+bài 1
+Viết chương trình Java mà khi chạy, màn hình console sẽ cho phép ta nhập vào một số nguyên, in ra màn hình “Đây là số nguyên dương”
+Nếu số vừa nhập vào là một số lớn hơn hoặc bằng 0, ngược lại in ra “Đây là số nguyên âm”.
+bài 2
+Viết chương trình cho phép nhập vào một số nguyên dương n, tính tổng tất cả số chẵn trong khoảng từ 0 - n.
+bài 3
+Viết chương trình để nhập nhập một số nguyên, tìm kết quả phép nhân của số đó với các số từ 1 - 20 , sau đó in kết quả ra màn hình.
+bài 4
+Viết chương trình cho phép nhập vào một số nguyên n ( n < 1000 )
+In ra tất cả số nguyên trong khoảng từ 0 - n.
+bài 5
+Viết chương trình cho phép nhập vào n, sau đó nhập vào n phần tử số nguyên (có thể dương hoặc âm).
+Cuối cùng, chương trình sẽ xuất ra phần tử có giá trị nhỏ nhất.
+bài 6
+Viết chương trình cho phép nhập vào n, sau đó nhập vào n phần tử số nguyên.
+Sắp xếp các phần tử trong mảng theo thứ tự ngược lại.
+bài 7
+Viết chương trình cho phép nhập vào một chuỗi
+Kiểm tra xem chuỗi này ký tự “a” xuất hiện bao nhiêu lần
+In ra số lần đó.
+bài 8
+Chương trình nhập vào một chuỗi và in ra chuỗi nghịch đảo của chuỗi nhập.
