@@ -14,10 +14,37 @@ public class Main {
 //    6. in ra danh sách nhân sự của 1 phòng ban
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
-        EmployeeController employeeController=new EmployeeController(scanner);
-        employeeController.addEmployee();
-       employeeController.getLstEmployee();
 
+        EmployeeController employeeController=new EmployeeController(scanner);
+//        employeeController.addEmployee();
+//       employeeController.getLstEmployee();
+
+        while (true){
+            printMenu();
+            System.out.println("enter option");
+            int option=Integer.parseInt(scanner.nextLine());;
+                if(option<1||option>6)
+                    return;
+                switch (option){
+                    case 1:
+                        System.out.println("chon1");
+                        break;
+                    default:
+                        System.out.println("chon sai");
+                }
+        }
+
+
+    }
+
+    public static void printMenu(){
+        System.out.println("0. stop chuongư trình");
+        System.out.println("1.Thêm nhân viên");
+        System.out.println("2.Xóa nhân viên");
+        System.out.println("3.Sửa thông tin nhân viên");
+        System.out.println("4.In ra danh sách nhân viên");
+        System.out.println("5.Thêm nhân viên vào 1 phòng ban");
+        System.out.println("6.In ra ds nhân sự 1 phòng ban");
 
     }
 }
