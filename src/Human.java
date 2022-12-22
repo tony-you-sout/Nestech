@@ -9,6 +9,18 @@ public class Human {
 
     }
     public Human(){
+        this.name="Default";
+        this.nation="Default";
+        this.age=0;
+        System.out.println("ông nội");
+    }
+    public Human(Human human){
+        System.out.println("human construc with this param");
+    }
+    public void printHumanInfo(Human human){
+        System.out.println(human.name);
+        System.out.println(human.nation);
+        System.out.println(human.age);
 
     }
 
@@ -21,4 +33,5 @@ public class Human {
     public  void eat(){
         System.out.println("mum mum");
     }
+
 }
