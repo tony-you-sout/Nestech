@@ -18,4 +18,29 @@ public class Employee {
     public String getName(){
         return this.name;
     }
+    public String getDateOfBirth(){
+        return this.dateOfBirth;
+    }
+    public UUID getMaNV(){
+        return this.maNV;
+    }
+    public String setName(String name){
+        if(!name.equals("")){
+            this.name=name;
+            return this.name;
+        }
+        return this.name=this.getName();
+
+
+
+    }
+
+    public String setDateOfBirth(String dateOfBirth) {
+        if(!dateOfBirth.equals("")){
+            this.dateOfBirth=dateOfBirth;
+            return this.getDateOfBirth();
+        }
+            return this.dateOfBirth=this.getDateOfBirth();
+
+    }
 }
