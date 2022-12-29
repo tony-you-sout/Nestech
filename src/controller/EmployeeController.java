@@ -33,6 +33,7 @@ public class EmployeeController {
             System.out.printf("Tên:%s\n",e.getName());
             System.out.printf("Năm sinh %s\n",e.getDateOfBirth());
             System.out.printf("Position:%s\n",e.getPosition());
+            System.out.printf("Salary:%d\n",e.caculateSalary());
             System.out.println("---------------------------------");
         }
     }
@@ -109,6 +110,16 @@ public class EmployeeController {
     }
 
     public void caculateSalary() {
-
+        System.out.println("Nhập manv");
+        UUID uid=UUID.fromString(scanner.nextLine());
+        for (Employee e:lstEmployee){
+            if(e.getMaNV().equals(uid)){
+                System.out.printf("Name:%s\n",e.getName());
+                System.out.printf("Salary:%d\n",e.caculateSalary());
+                System.out.println("------------------------------");
+                return;
+            }
+        }
+        System.out.println("Nhân viên này không tồn tại");
     }
 }
