@@ -6,9 +6,16 @@ import java.util.UUID;
 
 public class Employee {
     private String name;
+
+    public String getPosition() {
+        return position;
+    }
+
     private String dateOfBirth;
-    private final UUID maNV=UUID.randomUUID();
+    private  UUID maNV=UUID.randomUUID();
     private static String companyName="Nestech";
+    private  String position="Employee";
+    private long baseSalary=500;
 
 
     public Employee(String name, String dateOfBirth) {
@@ -35,6 +42,18 @@ public class Employee {
 
     }
 
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public void setBaseSalary(long baseSalary) {
+        this.baseSalary = baseSalary;
+    }
+
+    public long getBaseSalary() {
+        return baseSalary;
+    }
+
     public String setDateOfBirth(String dateOfBirth) {
         if(!dateOfBirth.equals("")){
             this.dateOfBirth=dateOfBirth;
@@ -42,5 +61,11 @@ public class Employee {
         }
             return this.dateOfBirth=this.getDateOfBirth();
 
+    }
+    public void setMaNV(UUID maNV){
+        this.maNV=maNV;
+    }
+    public long caculateSalary(){
+        return this.getBaseSalary();
     }
 }

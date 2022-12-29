@@ -1,6 +1,8 @@
 package controller;
 
+import entities.Director;
 import entities.Employee;
+import entities.Manager;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -30,6 +32,7 @@ public class EmployeeController {
             System.out.printf("MANV:%s\n", e.getMaNV().toString());
             System.out.printf("Tên:%s\n",e.getName());
             System.out.printf("Năm sinh %s\n",e.getDateOfBirth());
+            System.out.printf("Position:%s\n",e.getPosition());
             System.out.println("---------------------------------");
         }
     }
@@ -74,5 +77,38 @@ public class EmployeeController {
         }
         System.out.println("Kooong có nhân viên này");
         System.out.println("----------------------------------");
+    }
+
+    public void promote() {
+        System.out.println("Nhập mã nhân viên");
+        UUID uid=UUID.fromString(scanner.nextLine());
+        for(Employee e:lstEmployee){
+            if(e.getMaNV().equals(uid)){
+                System.out.println("1.Director 2.Manager");
+                int option=Integer.parseInt(scanner.nextLine());
+                switch (option){
+                    case 1:
+                        Director d=new Director(e.getName(),e.getDateOfBirth(),e.getMaNV());
+                        d.setPosition("Director");//set lại thuộc tinhs position thành director
+                        lstEmployee.set(lstEmployee.indexOf(e),d);
+                        System.out.println("đã save");
+                        return;
+                    case 2:
+                        Manager m=new Manager(e.getName(),e.getDateOfBirth(),e.getMaNV());
+                        m.setPosition("Manager");
+                        lstEmployee.set(lstEmployee.indexOf(e), m);
+                        System.out.println("đã save");
+                        return;
+                    default:
+                        System.out.println("không có lựa chọn này");
+                }
+
+            }
+        }
+
+    }
+
+    public void caculateSalary() {
+
     }
 }
