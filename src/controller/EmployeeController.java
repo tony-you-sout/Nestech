@@ -12,6 +12,7 @@ import java.util.Scanner;
 import java.util.UUID;
 
 public class EmployeeController {
+//    tiếp nhận request và trả về response cho user
     List<Employee> lstEmployee=new LinkedList<>();
     private EmployeeService employeeService=new EmployeeServiceimpl();
     private Scanner scanner;
