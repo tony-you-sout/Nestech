@@ -3,6 +3,8 @@ package controller;
 import entities.Director;
 import entities.Employee;
 import entities.Manager;
+import sevices.EmployeeService;
+import sevices.EmployeeServiceimpl;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -11,6 +13,7 @@ import java.util.UUID;
 
 public class EmployeeController {
     List<Employee> lstEmployee=new LinkedList<>();
+    private EmployeeService employeeService=new EmployeeServiceimpl();
     private Scanner scanner;
     public EmployeeController(Scanner scanner){
         this.scanner=scanner;
@@ -23,8 +26,8 @@ public class EmployeeController {
         String name=scanner.nextLine();
         System.out.println("nhập năm sinh");
         String dateOfBirth=scanner.nextLine();
-        Employee e=new Employee(name,dateOfBirth);
-        lstEmployee.add(e);
+
+        employeeService.addEmpployee(name,dateOfBirth);
 
     }
     public void printLstEmployee(){
