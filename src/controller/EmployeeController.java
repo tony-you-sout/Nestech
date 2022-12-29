@@ -32,14 +32,8 @@ public class EmployeeController {
 
     }
     public void printLstEmployee(){
-        for(Employee e:lstEmployee){
-            System.out.printf("MANV:%s\n", e.getMaNV().toString());
-            System.out.printf("Tên:%s\n",e.getName());
-            System.out.printf("Năm sinh %s\n",e.getDateOfBirth());
-            System.out.printf("Position:%s\n",e.getPosition());
-            System.out.printf("Salary:%d\n",e.caculateSalary());
-            System.out.println("---------------------------------");
-        }
+
+        employeeService.printLstEmployee();
     }
     public List<Employee> getLstEmployee(){
         return this.lstEmployee;

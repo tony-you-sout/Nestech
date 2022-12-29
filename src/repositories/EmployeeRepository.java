@@ -10,4 +10,6 @@ public interface EmployeeRepository {
     List<Employee> lstEmployee=new LinkedList<>();
 
     void addEmployee(Employee e);
+
+    List<Employee> getListEmployee();
 }
