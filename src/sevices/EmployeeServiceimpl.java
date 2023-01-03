@@ -1,5 +1,6 @@
 package sevices;
 
+import bean.IoCContainer;
 import entities.Director;
 import entities.Employee;
 import entities.Manager;
@@ -11,8 +12,11 @@ import java.util.Scanner;
 import java.util.UUID;
 
 public class EmployeeServiceimpl implements EmployeeService {
-    private EmployeeRepository employeeRepository = new EmployeeRepositoryImpl();
+    private EmployeeRepository employeeRepository;
     private Scanner scanner=new Scanner(System.in);
+    public EmployeeServiceimpl(){
+        employeeRepository=(EmployeeRepository) IoCContainer.getBean("employeeRepository");
+    }
 
 
     @Override

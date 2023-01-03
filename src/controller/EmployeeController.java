@@ -1,5 +1,6 @@
 package controller;
 
+import bean.IoCContainer;
 import entities.Director;
 import entities.Employee;
 import entities.Manager;
@@ -16,11 +17,13 @@ public class EmployeeController {
 
 
     private Scanner scanner;
+
+    private EmployeeService employeeService;
     public EmployeeController(Scanner scanner){
         this.scanner=scanner;
-
+        employeeService= (EmployeeService) IoCContainer.getBean("employeeService");
     }
-    private EmployeeService employeeService=new EmployeeServiceimpl();
+
 
     public void addEmployee(){
 

@@ -1,11 +1,14 @@
 package controller;
 
+import bean.IoCContainer;
 import entities.DevTeamDepartment;
 import entities.Employee;
 import entities.HumanResourceDepartmant;
 import entities.SaleDepartment;
 import sevices.DepartmentService;
 import sevices.DepartmentServiceImpl;
+import sevices.EmployeeService;
+import sevices.EmployeeServiceimpl;
 
 import java.util.List;
 import java.util.Scanner;
@@ -13,13 +16,14 @@ import java.util.UUID;
 
 public class DepartmentController {
     Scanner scanner;
-    SaleDepartment saleDepartment;
-    DevTeamDepartment devTeamDepartment;
-    HumanResourceDepartmant humanResourceDepartmant;
-    private DepartmentService departmentService=new DepartmentServiceImpl();
+
+    private DepartmentService departmentService;
+    private EmployeeService employeeService;
     public DepartmentController(Scanner scanner){
 
         this.scanner=scanner;
+        employeeService=(EmployeeService) IoCContainer.getBean("employeeService");
+        departmentService =(DepartmentService) IoCContainer.getBean("departmentService");
 //        this.saleDepartment=new SaleDepartment();
 //        this.devTeamDepartment=new DevTeamDepartment();
 //        this.humanResourceDepartmant=new HumanResourceDepartmant();

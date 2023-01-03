@@ -1,5 +1,6 @@
 package sevices;
 
+import bean.IoCContainer;
 import entities.DevTeamDepartment;
 import entities.Employee;
 import entities.HumanResourceDepartmant;
@@ -18,8 +19,13 @@ public class DepartmentServiceImpl implements DepartmentService{
     DevTeamDepartment devTeamDepartment=new DevTeamDepartment();
     HumanResourceDepartmant humanResourceDepartmant=new HumanResourceDepartmant();
     Scanner scanner=new Scanner(System.in);
-DepartmentRepository departmentRepository=new DepartmentRepositoryImpl();
-EmployeeRepository employeeRepository=new EmployeeRepositoryImpl();
+DepartmentRepository departmentRepository;
+EmployeeRepository employeeRepository;
+public DepartmentServiceImpl(){
+    departmentRepository=(DepartmentRepository) IoCContainer.getBean("departmentRepository");
+    employeeRepository=(EmployeeRepository) IoCContainer.getBean("employeeRepository");
+
+}
 
     @Override
     public void addEmployee(UUID uid) {
