@@ -46,4 +46,19 @@ public class EmployeeServiceimpl implements EmployeeService {
             }
         }
     }
+
+    @Override
+    public void changeEmployee(UUID uid) {
+                for(Employee e:employeeRepository.getListEmployee()){
+            if(e.getMaNV().equals(uid)){
+                System.out.println("Nhập tên nhân viên");
+                e.setName(scanner.nextLine());
+                System.out.println("Nhập năm sinh");
+                e.setDateOfBirth(scanner.nextLine());
+                System.out.println("Đã lưu");
+                System.out.println("----------------------------");
+                return;
+            }
+        }
+    }
 }

@@ -43,19 +43,6 @@ public class EmployeeController {
     public void deleteEmployee() {
         System.out.println("Nhập mã nhân viên muốn xóa");
         UUID uid=UUID.fromString(scanner.nextLine());
-//        for(Employee e:lstEmployee){
-//            if(e.getMaNV().equals(uid)){
-//                System.out.println("Bạn có chắc muốn xóa Y/N");
-//                String confirmation=scanner.nextLine();
-//                if(confirmation.equals("y") || confirmation.equals("Y")){
-//                    lstEmployee.remove(e);
-//                    System.out.println("đã xóa");
-//                    System.out.println("-------------------------");
-//                    return;
-//                }
-//                return;
-//
-//            }
         employeeService.deleteEmployee(uid);
 
         System.out.println("Không có nhân viên này");
@@ -66,17 +53,18 @@ public class EmployeeController {
     public void changeEmployee() {
         System.out.println("nhập MANV muốn thay đổi");
         UUID uid=UUID.fromString(scanner.nextLine());
-        for(Employee e:lstEmployee){
-            if(e.getMaNV().equals(uid)){
-                System.out.println("Nhập tên nhân viên");
-                e.setName(scanner.nextLine());
-                System.out.println("Nhập năm sinh");
-                e.setDateOfBirth(scanner.nextLine());
-                System.out.println("Đã lưu");
-                System.out.println("----------------------------");
-                return;
-            }
-        }
+//        for(Employee e:lstEmployee){
+//            if(e.getMaNV().equals(uid)){
+//                System.out.println("Nhập tên nhân viên");
+//                e.setName(scanner.nextLine());
+//                System.out.println("Nhập năm sinh");
+//                e.setDateOfBirth(scanner.nextLine());
+//                System.out.println("Đã lưu");
+//                System.out.println("----------------------------");
+//                return;
+//            }
+//        }
+        employeeService.changeEmployee(uid);
         System.out.println("Kooong có nhân viên này");
         System.out.println("----------------------------------");
     }

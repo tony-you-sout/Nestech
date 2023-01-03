@@ -9,4 +9,6 @@ public interface EmployeeService {
     void printLstEmployee();
 
     void deleteEmployee(UUID uid);
+
+    void changeEmployee(UUID uid);
 }
