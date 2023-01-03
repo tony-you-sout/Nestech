@@ -1,5 +1,6 @@
 package controller;
 
+import beans.IocContainer;
 import entities.Director;
 import entities.Employee;
 import entities.Manager;
@@ -14,10 +15,12 @@ import java.util.UUID;
 public class EmployeeController {
 //    tiếp nhận request và trả về response cho user
     List<Employee> lstEmployee=new LinkedList<>();
-    private EmployeeService employeeService=new EmployeeServiceimpl();
+    private EmployeeService employeeService;
+
     private Scanner scanner;
     public EmployeeController(Scanner scanner){
         this.scanner=scanner;
+        employeeService= (EmployeeService) IocContainer.getBean("employeeService");
 
     }
 

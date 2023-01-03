@@ -1,11 +1,7 @@
-import controller.DepartmentController;
-import controller.EmployeeController;
-import entities.Employee;
 
-import java.util.List;
-import java.util.Scanner;
 
 public class Main {
+
 //    viết chương trình quản lý nhân viên có các chức năng sau:
 //    1.cho người dùng tạo 1 nhân viên mới có các thông tin: tên,năm sinh,mã nhân viên,tên cty sau đó thêm nhân viên này vào 1 ds nhân sự
 //    2.cho người dùng xóa 1 nhân viên ra khỏi dsnv

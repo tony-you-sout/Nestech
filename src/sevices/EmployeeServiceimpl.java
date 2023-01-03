@@ -1,11 +1,15 @@
 package sevices;
 
+import beans.IocContainer;
 import entities.Employee;
 import repositories.EmployeeRepository;
 import repositories.EmployeeRepositoryImpl;
 
 public class EmployeeServiceimpl implements EmployeeService{
-    private EmployeeRepository employeeRepository=new EmployeeRepositoryImpl();
+    private EmployeeRepository employeeRepository=null;
+    public EmployeeServiceimpl(){
+        employeeRepository= (EmployeeRepository) IocContainer.getBean("employeeRepository");
+    }
 
     @Override
     public void addEmpployee(String name, String dateOfBirth) {
