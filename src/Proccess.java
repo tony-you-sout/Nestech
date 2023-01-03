@@ -47,7 +47,7 @@ public class Proccess {
                     break;
                 case 5:
                     System.out.println("Bạn đã chọn thêm nhân viên vào 1 phòng ban");
-                    departmentController.addEmployee(employeeController.getLstEmployee());
+                    departmentController.addEmployee();
                     break;
                 case 6:
                     System.out.println("Bạn đã chọn in ra danh sách nhn viên của 1 phòng ban");

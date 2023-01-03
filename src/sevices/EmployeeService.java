@@ -13,4 +13,6 @@ public interface EmployeeService {
     void changeEmployee(UUID uid);
 
     void promote(UUID uid);
+
+    void caculateSalary(UUID uid);
 }

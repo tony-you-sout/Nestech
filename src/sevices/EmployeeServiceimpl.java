@@ -92,4 +92,17 @@ public class EmployeeServiceimpl implements EmployeeService {
             }
         }
     }
+
+    @Override
+    public void caculateSalary(UUID uid) {
+        List<Employee> lstEmployee=employeeRepository.getListEmployee();
+                for (Employee e:lstEmployee){
+            if(e.getMaNV().equals(uid)){
+                System.out.printf("Name:%s\n",e.getName());
+                System.out.printf("Salary:%d\n",e.caculateSalary());
+                System.out.println("------------------------------");
+                return;
+            }
+        }
+    }
 }

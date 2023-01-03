@@ -14,11 +14,7 @@ public class Main {
 //    5.cho phép người dùng thêm nhân viên vào 1 trong 3 phòng ban:NhanSu,Sale,DevTeam
 //    6. in ra danh sách nhân sự của 1 phòng ban
     public static void main(String[] args) {
-
                 Proccess.handleRequest();
-
-
-
     }
 
 
