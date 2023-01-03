@@ -1,9 +1,12 @@
 package sevices;
 
+import entities.Director;
 import entities.Employee;
+import entities.Manager;
 import repositories.EmployeeRepository;
 import repositories.EmployeeRepositoryImpl;
 
+import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -58,6 +61,34 @@ public class EmployeeServiceimpl implements EmployeeService {
                 System.out.println("Đã lưu");
                 System.out.println("----------------------------");
                 return;
+            }
+        }
+    }
+
+    @Override
+    public void promote(UUID uid) {
+        List<Employee> lstEmployee=employeeRepository.getListEmployee();
+                for(Employee e:lstEmployee){
+            if(e.getMaNV().equals(uid)){
+                System.out.println("1.Director 2.Manager");
+                int option=Integer.parseInt(scanner.nextLine());
+                switch (option){
+                    case 1:
+                        Director d=new Director(e.getName(),e.getDateOfBirth(),e.getMaNV());
+                        d.setPosition("Director");//set lại thuộc tinhs position thành director
+                       lstEmployee.set(lstEmployee.indexOf(e),d);
+                        System.out.println("đã save");
+                        return;
+                    case 2:
+                        Manager m=new Manager(e.getName(),e.getDateOfBirth(),e.getMaNV());
+                        m.setPosition("Manager");
+                        lstEmployee.set(lstEmployee.indexOf(e), m);
+                        System.out.println("đã save");
+                        return;
+                    default:
+                        System.out.println("không có lựa chọn này");
+                }
+
             }
         }
     }

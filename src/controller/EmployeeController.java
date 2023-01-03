@@ -53,17 +53,6 @@ public class EmployeeController {
     public void changeEmployee() {
         System.out.println("nhập MANV muốn thay đổi");
         UUID uid=UUID.fromString(scanner.nextLine());
-//        for(Employee e:lstEmployee){
-//            if(e.getMaNV().equals(uid)){
-//                System.out.println("Nhập tên nhân viên");
-//                e.setName(scanner.nextLine());
-//                System.out.println("Nhập năm sinh");
-//                e.setDateOfBirth(scanner.nextLine());
-//                System.out.println("Đã lưu");
-//                System.out.println("----------------------------");
-//                return;
-//            }
-//        }
         employeeService.changeEmployee(uid);
         System.out.println("Kooong có nhân viên này");
         System.out.println("----------------------------------");
@@ -73,29 +62,30 @@ public class EmployeeController {
     public void promote() {
         System.out.println("Nhập mã nhân viên");
         UUID uid=UUID.fromString(scanner.nextLine());
-        for(Employee e:lstEmployee){
-            if(e.getMaNV().equals(uid)){
-                System.out.println("1.Director 2.Manager");
-                int option=Integer.parseInt(scanner.nextLine());
-                switch (option){
-                    case 1:
-                        Director d=new Director(e.getName(),e.getDateOfBirth(),e.getMaNV());
-                        d.setPosition("Director");//set lại thuộc tinhs position thành director
-                        lstEmployee.set(lstEmployee.indexOf(e),d);
-                        System.out.println("đã save");
-                        return;
-                    case 2:
-                        Manager m=new Manager(e.getName(),e.getDateOfBirth(),e.getMaNV());
-                        m.setPosition("Manager");
-                        lstEmployee.set(lstEmployee.indexOf(e), m);
-                        System.out.println("đã save");
-                        return;
-                    default:
-                        System.out.println("không có lựa chọn này");
-                }
-
-            }
-        }
+        employeeService.promote(uid);
+//        for(Employee e:lstEmployee){
+//            if(e.getMaNV().equals(uid)){
+//                System.out.println("1.Director 2.Manager");
+//                int option=Integer.parseInt(scanner.nextLine());
+//                switch (option){
+//                    case 1:
+//                        Director d=new Director(e.getName(),e.getDateOfBirth(),e.getMaNV());
+//                        d.setPosition("Director");//set lại thuộc tinhs position thành director
+//                        lstEmployee.set(lstEmployee.indexOf(e),d);
+//                        System.out.println("đã save");
+//                        return;
+//                    case 2:
+//                        Manager m=new Manager(e.getName(),e.getDateOfBirth(),e.getMaNV());
+//                        m.setPosition("Manager");
+//                        lstEmployee.set(lstEmployee.indexOf(e), m);
+//                        System.out.println("đã save");
+//                        return;
+//                    default:
+//                        System.out.println("không có lựa chọn này");
+//                }
+//
+//            }
+//        }
 
     }
 

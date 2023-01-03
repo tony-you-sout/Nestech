@@ -11,4 +11,6 @@ public interface EmployeeService {
     void deleteEmployee(UUID uid);
 
     void changeEmployee(UUID uid);
+
+    void promote(UUID uid);
 }
