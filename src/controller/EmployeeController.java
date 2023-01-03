@@ -14,12 +14,13 @@ import java.util.UUID;
 public class EmployeeController {
 //    tiếp nhận request và trả về response cho user
     List<Employee> lstEmployee=new LinkedList<>();
-    private EmployeeService employeeService=new EmployeeServiceimpl();
+
     private Scanner scanner;
     public EmployeeController(Scanner scanner){
         this.scanner=scanner;
 
     }
+    private EmployeeService employeeService=new EmployeeServiceimpl();
 
     public void addEmployee(){
 
@@ -42,23 +43,25 @@ public class EmployeeController {
     public void deleteEmployee() {
         System.out.println("Nhập mã nhân viên muốn xóa");
         UUID uid=UUID.fromString(scanner.nextLine());
-        for(Employee e:lstEmployee){
-            if(e.getMaNV().equals(uid)){
-                System.out.println("Bạn có chắc muốn xóa Y/N");
-                String confirmation=scanner.nextLine();
-                if(confirmation.equals("y") || confirmation.equals("Y")){
-                    lstEmployee.remove(e);
-                    System.out.println("đã xóa");
-                    System.out.println("-------------------------");
-                    return;
-                }
-                return;
+//        for(Employee e:lstEmployee){
+//            if(e.getMaNV().equals(uid)){
+//                System.out.println("Bạn có chắc muốn xóa Y/N");
+//                String confirmation=scanner.nextLine();
+//                if(confirmation.equals("y") || confirmation.equals("Y")){
+//                    lstEmployee.remove(e);
+//                    System.out.println("đã xóa");
+//                    System.out.println("-------------------------");
+//                    return;
+//                }
+//                return;
+//
+//            }
+        employeeService.deleteEmployee(uid);
 
-            }
-        }
         System.out.println("Không có nhân viên này");
         System.out.println("----------------------------------");
     }
+
 
     public void changeEmployee() {
         System.out.println("nhập MANV muốn thay đổi");
@@ -77,6 +80,7 @@ public class EmployeeController {
         System.out.println("Kooong có nhân viên này");
         System.out.println("----------------------------------");
     }
+
 
     public void promote() {
         System.out.println("Nhập mã nhân viên");
@@ -121,3 +125,4 @@ public class EmployeeController {
         System.out.println("Nhân viên này không tồn tại");
     }
 }
+

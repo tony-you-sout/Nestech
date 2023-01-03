@@ -15,4 +15,11 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     public List<Employee> getListEmployee() {
         return lstEmployee;
     }
+
+    @Override
+    public void removeEmployee(Employee e) {
+        lstEmployee.remove(e);
+        System.out.println("đã xóa");
+        System.out.println("-------------------------");
+    }
 }

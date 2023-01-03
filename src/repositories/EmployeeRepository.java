@@ -12,4 +12,6 @@ public interface EmployeeRepository {
     void addEmployee(Employee e);
 
     List<Employee> getListEmployee();
+
+    void removeEmployee(Employee e);
 }
